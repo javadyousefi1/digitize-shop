@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from "react-router-dom";
+import Layout from "./layout/layout";
+import HomePage from "./pages/HomePage";
+import Category from "./pages/category";
+import Contact from "./pages/contactUs";
+import Cart from "./pages/cart";
+import Login from "./pages/login";
+import Product from "./pages/product";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function App() {
+import CartProvider from "./provider/cartProvider";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <Layout>
+        <ToastContainer rtl />
+        <Switch>
+          <Route path="/category" component={Category} />
+          <Route path="/contactUs" component={Contact} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/login" component={Login} />
+          <Route path="/product" component={Product} />
+          <Route path="/" exact component={HomePage} />
+        </Switch>
+      </Layout>
+    </CartProvider>
   );
-}
+};
 
 export default App;

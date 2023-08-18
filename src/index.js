@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import "./font/TTF/Kalameh-Black.ttf";
+import "./font/TTF/Kalameh-Bold.ttf";
+import "./font/TTF/Kalameh-ExtraBold.ttf";
+import "./font/TTF/Kalameh-ExtraLight.ttf";
+import "./font/TTF/Kalameh-Regular.ttf";
+import "./font/TTF/Kalameh-Bold.ttf";
+import "./font/TTF/Kalameh-Medium.ttf";
+import "./font/TTF/Kalameh-Thin.ttf";
+import "./font/TTF/Kalameh-Light.ttf";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+      <App />
+  </BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

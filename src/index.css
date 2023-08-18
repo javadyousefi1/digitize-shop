@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: 'kalame';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./font/TTF/Kalameh-Regular.ttf');
+    /* src: url('../src/font/_eot/KalamehWeb-Regular.eot?#iefix') format('embedded-opentype'),   */
+    /* url('../src/font/_woff2/KalamehWeb-Regular.woff2') format('woff2'),  */
+    /* url('../src/font/_woff/KalamehWeb-Regular.woff') format('woff'),  */
+    /* url('../src/font/ttf/Kalameh-Light.ttf') format('truetype'); */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    /* src: url('../src/font/TTF/Kalameh-Regular.ttf'); */
+
+
+* {
+    font-family: 'kalame';
+    user-select: none;
 }
